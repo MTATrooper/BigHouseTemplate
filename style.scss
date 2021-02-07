@@ -1,0 +1,718 @@
+$caoHeader: 104px;
+$caoHeaderLogo: 70px;
+$caoSearchBox: $caoHeader * 4 / 10;
+$caoButtonHanhDong: 90px;
+$mauNenBody: #CCCCCC;
+$mauNenComponent: #F2F2F2;
+$mauTrang: #FFFFFF;
+$mauShadow: #2e2d2d;
+$maugia: #C1272D;
+$mauNutMuaNgay: #F15A24;
+$mauBonCau: #C1272D;
+$mauChauRuaMat: #F15A24;
+$mauSenTam: #29ABE2;
+$mauVoiChau: #0071BC;
+$mauBonTam: #22B573;
+$mauBonTieu: #ED1E79;
+$mauPhuKien: #FBB03B;
+$fontFamily: 'Roboto';
+$coChuNho: 12px;
+$coChuVua: 14px;
+$coChuTo: 16px;
+$kichthuocicon: 20px;
+$caoDuAn: 580px;
+@mixin initButton() {
+    background: none;
+    border: none;
+    margin: ($caoHeader - $caoButtonHanhDong)/2 auto;
+}
+
+@mixin setButtonHanhDong() {
+    width: 50px;
+    height: 50px;
+    // background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin setMenuIcon($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin setBackgroundShowSanPham($mau) {
+    .navbars {
+        background-color: $mau;
+        color: $mauTrang
+    }
+    .menu-item {
+        &:hover {
+            background-color: $mau;
+        }
+    }
+}
+
+body {
+    background-color: $mauNenBody !important;
+    font-family: $fontFamily;
+    font-size: $coChuVua;
+    a {
+        color: #333333;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    // .container {
+    //     // width: 95%;
+    //     max-width: 100%;
+    // }
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.header {
+    font-size: $coChuVua;
+    .top {
+        background-color: $mauNenComponent;
+        height: 42px;
+        .container {
+            // width: 100%;
+            .top-thongtin {
+                padding: 9px;
+                text-align: right;
+                .thongtin {
+                    display: inline;
+                    margin: auto 20px;
+                }
+            }
+        }
+        i {
+            font-size: $kichthuocicon
+        }
+    }
+    .intro {
+        .row {
+            margin-top: 5px;
+        }
+    }
+}
+
+.hanhdong {
+    height: $caoHeader;
+    background-color: $mauTrang;
+    .header-logo {
+        margin: ($caoHeader - $caoHeaderLogo)/2 auto;
+        width: 70%;
+        height: $caoHeaderLogo;
+        background-image: url('images/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.search-box {
+    width: 100%;
+    height: $caoSearchBox;
+    margin: ($caoHeader - $caoSearchBox)/2 auto;
+    position: relative;
+    .search-input {
+        height: 100%;
+        width: 100%;
+        padding-left: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: $mauNenComponent;
+    }
+    .btn-search {
+        width: 9%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        border: none;
+        border-radius: 10px;
+        background-color: #808080
+    }
+}
+
+.header-hanhdong {
+    display: inline;
+    margin: auto 25px;
+    a {
+        display: block;
+        color: #666666;
+    }
+}
+
+.btn-hanhdong {
+    @include initButton;
+    &:hover {
+        a {
+            color: #000000;
+        }
+    }
+}
+
+.icon-khuyenmai {
+    background-image: url('images/promotion.png');
+    @include setButtonHanhDong;
+}
+
+.icon-donhang {
+    background-image: url('images/donhang.png');
+    @include setButtonHanhDong;
+}
+
+.icon-giohang {
+    background-image: url('images/giohang.png');
+    @include setButtonHanhDong;
+}
+
+.menu {
+    list-style: none;
+    // padding: 0 10px;
+    margin: 0;
+    background-color: $mauTrang;
+    box-shadow: 2px 2px 4px $mauShadow;
+    li {
+        &:hover {
+            // cursor: pointer;
+            background-color: $mauNenComponent;
+        }
+        min-height: 55px;
+        padding: 0 10px;
+        border-bottom: solid 1px $mauNenBody;
+        span {
+            display: inline-block;
+            width: 75%;
+            font-size: $coChuVua;
+        }
+    }
+}
+
+.menu-icon {
+    display: inline-table;
+    width: 15%;
+    height: $kichthuocicon;
+    margin: (55px - $kichthuocicon)/2 0px;
+    font-size: $kichthuocicon;
+}
+
+.icon-right {
+    width: 10%;
+    height: 30px;
+    background-image: url("images/icon-menuright.png");
+    background-repeat: no-repeat;
+    float: right;
+    background-position: center;
+    margin-top: 15px;
+}
+
+.icon-bars {
+    @include setMenuIcon('images/icon-bars.png');
+}
+
+.icon-boncau {
+    @include setMenuIcon('images/icon-boncau.png');
+}
+
+.icon-chauruamat {
+    @include setMenuIcon('images/icon-chauruamat.png')
+}
+
+.icon-voichau {
+    @include setMenuIcon('images/icon-voichau.png')
+}
+
+.icon-sentam {
+    @include setMenuIcon('images/icon-sentam.png')
+}
+
+.icon-bontieu {
+    @include setMenuIcon('images/icon-bontieu.png')
+}
+
+.icon-bontam {
+    @include setMenuIcon('images/icon-bontam.png')
+}
+
+.icon-phukienphongtam {
+    @include setMenuIcon('images/icon-phukienphongtam.png')
+}
+
+.menuchild {
+    width: 200%;
+    padding: 10px 15px 0;
+    position: absolute;
+    left: 100%;
+    top: -50px;
+    visibility: hidden;
+    transform: translateY(50px);
+    z-index: 10;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    transition: 0.8s;
+    border-radius: 10px;
+    a {
+        display: block;
+        font-size: $coChuNho;
+    }
+}
+
+.icon-menuchild {
+    background-image: url('images/icon-menuchild.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide-quangcao {
+    padding: 0;
+    #slideshow {
+        overflow: hidden;
+        height: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .slide-wrapper {
+        width: 400%;
+        height: 100%;
+        -webkit-animation: slide 14s ease infinite;
+    }
+    .slide {
+        float: left;
+        height: 100%;
+        width: 25%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @-webkit-keyframes slide {
+        20% {
+            margin-left: 0px;
+        }
+        30% {
+            margin-left: -100%;
+        }
+        50% {
+            margin-left: -100%;
+        }
+        60% {
+            margin-left: -200%;
+        }
+        80% {
+            margin-left: -200%;
+        }
+    }
+    .row {
+        margin: 0 !important;
+        height: 20%;
+    }
+}
+
+.khuyenmai {
+    height: 100%;
+    background-color: $mauTrang;
+    border-right: solid 1px;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+        width: 102%;
+        // height: 102%;
+        box-shadow: 2px 2px 4px $mauShadow;
+        position: relative;
+        z-index: 10;
+    }
+    p {
+        // display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+.line {
+    background-image: url('images/line.png');
+    width: 160px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 10px;
+    margin-left: 10px;
+}
+
+.nhasanxuatContainer {
+    margin: 0 -5px 0 0;
+}
+
+.nhasanxuatBox {
+    padding: 5px 5px 0 0;
+}
+
+.logo-nhasanxuat {
+    width: 100%;
+}
+
+#myCarousel .thumbnail {
+    margin-bottom: 0;
+}
+
+.saleBox {
+    .container {
+        margin: 0;
+        width: 100%;
+        padding: 0
+    }
+    .row {
+        margin: 0
+    }
+}
+
+// .well {
+//     min-height: 20px;
+//     padding: 19px;
+//     margin-bottom: 20px;
+//     background-color: #f5f5f5;
+//     border: 1px solid #e3e3e3;
+//     border-radius: 4px;
+//     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+//     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+// }
+.well {
+    width: 100%;
+}
+
+.carousel-control-prev {
+    width: 3%;
+    top: 45%;
+    background-color: $mauNenBody;
+    height: 20%;
+    border-radius: 0 25px 25px 0;
+    &:hover {
+        background-color: $mauNutMuaNgay;
+    }
+}
+
+.carousel-control-next {
+    @extend .carousel-control-prev;
+    border-radius: 25px 0 0 25px;
+}
+
+.sanphamkhuyenmai-box {
+    background-color: $mauTrang;
+    min-height: 340px;
+    &:hover {
+        .xemhang {
+            display: inline-block;
+        }
+    }
+}
+
+.border-line {
+    width: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%
+}
+
+.item {
+    height: 100%;
+}
+
+.anhSanPham {
+    margin: 5% 10% 0;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    margin-left: 5%;
+}
+
+.xemhang {
+    text-align: center;
+    display: none;
+}
+
+.giaban {
+    font-size: $coChuNho;
+    color: $maugia;
+    font-weight: bold;
+    margin-right: 10%;
+}
+
+.giagoc {
+    font-size: $coChuNho;
+    -webkit-text-decoration-line: line-through;
+    text-decoration-line: line-through;
+}
+
+.btn-xemnhanh {
+    border-radius: 25px;
+    border: none;
+    font-size: $coChuNho;
+    margin-bottom: 5px;
+}
+
+.btn-muangay {
+    background-color: $mauNutMuaNgay;
+    @extend .btn-xemnhanh;
+    &:hover {
+        background-color: $mauBonCau;
+    }
+}
+
+.showSanPham {
+    margin: 10px 0;
+    .container {
+        width: 100%;
+        padding: 0
+    }
+    .row {
+        margin: 0
+    }
+}
+
+.navbars {
+    margin-bottom: 10px;
+    span {
+        font-size: $coChuTo;
+    }
+    a {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        padding-right: 5%;
+        // margin: 10px 0;
+        font-size: $coChuVua;
+        color: $mauTrang;
+    }
+}
+
+.menu-item {
+    position: relative;
+    span {
+        position: absolute;
+        top: 20px
+    }
+}
+
+.danhmuc {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 80%;
+    margin-left: 10px;
+    transition: 0.6s;
+    visibility: hidden;
+    z-index: 10;
+    li {
+        position: relative;
+    }
+}
+
+.showSanPham-menu {
+    margin: 0 -15px;
+}
+
+.cacsanpham {
+    padding-left: 0;
+    .row {
+        height: 50%
+    }
+}
+
+.sanpham-box {
+    background-color: $mauTrang;
+    &:hover {
+        .xemhang {
+            display: inline-block;
+        }
+    }
+}
+
+.btn-xemthem {
+    border: 2px solid $maugia;
+    border-radius: 10px;
+    color: $maugia;
+    font-weight: bold;
+    &:hover {
+        background-color: $maugia;
+        color: $mauTrang
+    }
+}
+
+#boncau {
+    @include setBackgroundShowSanPham($mauBonCau);
+}
+
+#chauruamat {
+    @include setBackgroundShowSanPham($mauChauRuaMat);
+}
+
+#voichau {
+    @include setBackgroundShowSanPham($mauVoiChau);
+}
+
+#sentam {
+    @include setBackgroundShowSanPham($mauSenTam);
+}
+
+#bontieu {
+    @include setBackgroundShowSanPham($mauBonTieu);
+}
+
+#bontam {
+    @include setBackgroundShowSanPham($mauBonTam);
+}
+
+#phukien {
+    @include setBackgroundShowSanPham($mauPhuKien);
+}
+
+.kenhtuvan {
+    margin-top: 30px;
+    background-color: $mauTrang;
+    overflow: hidden;
+    .container {
+        div {
+            padding: 0;
+            margin: 0
+        }
+    }
+}
+
+.kenhtuvan-header {
+    height: 10px;
+    background-color: $maugia;
+}
+
+.kenhtuvan-title {
+    font-size: $coChuVua;
+    margin: 10px 0 !important;
+}
+
+.xemthem {
+    margin: 10px;
+    div {
+        text-align: center;
+    }
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer-top {
+    height: 10px;
+    background-color: $maugia
+}
+
+.chinhsach-huongdan {
+    background-color: $mauNenComponent;
+    .row {
+        padding: 0 5% 30px 5%;
+    }
+    a {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+.footer-title {
+    margin: 20px 0;
+}
+
+.footer-content {
+    p {
+        margin-bottom: 5px;
+    }
+}
+
+.footer-logo {
+    margin: 20%;
+    img {
+        display: block;
+        margin: 10px
+    }
+}
+
+.morong {
+    margin: 20px 0;
+}
+
+.duan-title,
+.tintuc-title {
+    background-color: $mauTrang;
+    display: inline-block;
+    p {
+        margin: 0;
+        padding: 10px
+    }
+}
+
+.duan-header_border {
+    height: 6px;
+    background-color: $maugia
+}
+
+.tintuc-header_border {
+    height: 6px;
+    background-color: $mauVoiChau
+}
+
+.duan-content,
+.tintuc-content {
+    max-height: $caoDuAn;
+    .row {
+        margin: 0
+    }
+}
+
+.duan-item {
+    padding: 15px;
+    background-color: $mauTrang;
+}
+
+.duan-image {
+    width: 100%;
+    max-height: 200px;
+}
+
+.duan-ten {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tintuc {
+    height: 100%;
+}
+
+.tintuc-content {
+    background-color: $mauTrang;
+    padding-bottom: 10px;
+    height: 100%;
+    hr {
+        margin: 0 10px 0
+    }
+}
+
+.tintuc-item {
+    padding: 15px 0;
+    height: 33.333%;
+    a {
+        display: inline-block
+    }
+}
+
+.tintuc-item-title {
+    padding: 0;
+    display: grid;
+    align-items: center
+}

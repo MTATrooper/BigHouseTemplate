@@ -1,0 +1,742 @@
+body {
+  background-color: #CCCCCC !important;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+body a {
+  color: #333333;
+}
+
+body img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.header {
+  font-size: 14px;
+}
+
+.header .top {
+  background-color: #F2F2F2;
+  height: 42px;
+}
+
+.header .top .container .top-thongtin {
+  padding: 9px;
+  text-align: right;
+}
+
+.header .top .container .top-thongtin .thongtin {
+  display: inline;
+  margin: auto 20px;
+}
+
+.header .top i {
+  font-size: 20px;
+}
+
+.header .intro .row {
+  margin-top: 5px;
+}
+
+.hanhdong {
+  height: 104px;
+  background-color: #FFFFFF;
+}
+
+.hanhdong .header-logo {
+  margin: 17px auto;
+  width: 70%;
+  height: 70px;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.search-box {
+  width: 100%;
+  height: 41.6px;
+  margin: 31.2px auto;
+  position: relative;
+}
+
+.search-box .search-input {
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #F2F2F2;
+}
+
+.search-box .btn-search {
+  width: 9%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #808080;
+}
+
+.header-hanhdong {
+  display: inline;
+  margin: auto 25px;
+}
+
+.header-hanhdong a {
+  display: block;
+  color: #666666;
+}
+
+.btn-hanhdong {
+  background: none;
+  border: none;
+  margin: 7px auto;
+}
+
+.btn-hanhdong:hover a {
+  color: #000000;
+}
+
+.icon-khuyenmai {
+  background-image: url("images/promotion.png");
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-donhang {
+  background-image: url("images/donhang.png");
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-giohang {
+  background-image: url("images/giohang.png");
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 2px 2px 4px #2e2d2d;
+          box-shadow: 2px 2px 4px #2e2d2d;
+}
+
+.menu li {
+  min-height: 55px;
+  padding: 0 10px;
+  border-bottom: solid 1px #CCCCCC;
+}
+
+.menu li:hover {
+  background-color: #F2F2F2;
+}
+
+.menu li span {
+  display: inline-block;
+  width: 75%;
+  font-size: 14px;
+}
+
+.menu-icon {
+  display: inline-table;
+  width: 15%;
+  height: 20px;
+  margin: 17.5px 0px;
+  font-size: 20px;
+}
+
+.icon-right {
+  width: 10%;
+  height: 30px;
+  background-image: url("images/icon-menuright.png");
+  background-repeat: no-repeat;
+  float: right;
+  background-position: center;
+  margin-top: 15px;
+}
+
+.icon-bars {
+  background-image: url("images/icon-bars.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-boncau {
+  background-image: url("images/icon-boncau.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-chauruamat {
+  background-image: url("images/icon-chauruamat.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-voichau {
+  background-image: url("images/icon-voichau.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-sentam {
+  background-image: url("images/icon-sentam.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-bontieu {
+  background-image: url("images/icon-bontieu.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-bontam {
+  background-image: url("images/icon-bontam.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-phukienphongtam {
+  background-image: url("images/icon-phukienphongtam.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.menuchild {
+  width: 200%;
+  padding: 10px 15px 0;
+  position: absolute;
+  left: 100%;
+  top: -50px;
+  visibility: hidden;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  z-index: 10;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  border-radius: 10px;
+}
+
+.menuchild a {
+  display: block;
+  font-size: 12px;
+}
+
+.icon-menuchild {
+  background-image: url("images/icon-menuchild.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide-quangcao {
+  padding: 0;
+}
+
+.slide-quangcao #slideshow {
+  overflow: hidden;
+  height: 80%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slide-quangcao .slide-wrapper {
+  width: 400%;
+  height: 100%;
+  -webkit-animation: slide 14s ease infinite;
+}
+
+.slide-quangcao .slide {
+  float: left;
+  height: 100%;
+  width: 25%;
+}
+
+.slide-quangcao .slide img {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes slide {
+  20% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -100%;
+  }
+  60% {
+    margin-left: -200%;
+  }
+  80% {
+    margin-left: -200%;
+  }
+}
+
+.slide-quangcao .row {
+  margin: 0 !important;
+  height: 20%;
+}
+
+.khuyenmai {
+  height: 100%;
+  background-color: #FFFFFF;
+  border-right: solid 1px;
+  text-align: center;
+}
+
+.khuyenmai:hover {
+  cursor: pointer;
+  width: 102%;
+  -webkit-box-shadow: 2px 2px 4px #2e2d2d;
+          box-shadow: 2px 2px 4px #2e2d2d;
+  position: relative;
+  z-index: 10;
+}
+
+.khuyenmai p {
+  margin: 0 auto;
+}
+
+.line {
+  background-image: url("images/line.png");
+  width: 160px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 10px;
+  margin-left: 10px;
+}
+
+.nhasanxuatContainer {
+  margin: 0 -5px 0 0;
+}
+
+.nhasanxuatBox {
+  padding: 5px 5px 0 0;
+}
+
+.logo-nhasanxuat {
+  width: 100%;
+}
+
+#myCarousel .thumbnail {
+  margin-bottom: 0;
+}
+
+.saleBox .container {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.saleBox .row {
+  margin: 0;
+}
+
+.well {
+  width: 100%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 3%;
+  top: 45%;
+  background-color: #CCCCCC;
+  height: 20%;
+  border-radius: 0 25px 25px 0;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: #F15A24;
+}
+
+.carousel-control-next {
+  border-radius: 25px 0 0 25px;
+}
+
+.sanphamkhuyenmai-box {
+  background-color: #FFFFFF;
+  min-height: 340px;
+}
+
+.sanphamkhuyenmai-box:hover .xemhang {
+  display: inline-block;
+}
+
+.border-line {
+  width: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.item {
+  height: 100%;
+}
+
+.anhSanPham {
+  margin: 5% 10% 0;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  margin-left: 5%;
+}
+
+.xemhang {
+  text-align: center;
+  display: none;
+}
+
+.giaban {
+  font-size: 12px;
+  color: #C1272D;
+  font-weight: bold;
+  margin-right: 10%;
+}
+
+.giagoc {
+  font-size: 12px;
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+}
+
+.btn-xemnhanh, .btn-muangay {
+  border-radius: 25px;
+  border: none;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.btn-muangay {
+  background-color: #F15A24;
+}
+
+.btn-muangay:hover {
+  background-color: #C1272D;
+}
+
+.showSanPham {
+  margin: 10px 0;
+}
+
+.showSanPham .container {
+  width: 100%;
+  padding: 0;
+}
+
+.showSanPham .row {
+  margin: 0;
+}
+
+.navbars {
+  margin-bottom: 10px;
+}
+
+.navbars span {
+  font-size: 16px;
+}
+
+.navbars a {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  padding-right: 5%;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item span {
+  position: absolute;
+  top: 20px;
+}
+
+.danhmuc {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 80%;
+  margin-left: 10px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.danhmuc li {
+  position: relative;
+}
+
+.showSanPham-menu {
+  margin: 0 -15px;
+}
+
+.cacsanpham {
+  padding-left: 0;
+}
+
+.cacsanpham .row {
+  height: 50%;
+}
+
+.sanpham-box {
+  background-color: #FFFFFF;
+}
+
+.sanpham-box:hover .xemhang {
+  display: inline-block;
+}
+
+.btn-xemthem {
+  border: 2px solid #C1272D;
+  border-radius: 10px;
+  color: #C1272D;
+  font-weight: bold;
+}
+
+.btn-xemthem:hover {
+  background-color: #C1272D;
+  color: #FFFFFF;
+}
+
+#boncau .navbars {
+  background-color: #C1272D;
+  color: #FFFFFF;
+}
+
+#boncau .menu-item:hover {
+  background-color: #C1272D;
+}
+
+#chauruamat .navbars {
+  background-color: #F15A24;
+  color: #FFFFFF;
+}
+
+#chauruamat .menu-item:hover {
+  background-color: #F15A24;
+}
+
+#voichau .navbars {
+  background-color: #0071BC;
+  color: #FFFFFF;
+}
+
+#voichau .menu-item:hover {
+  background-color: #0071BC;
+}
+
+#sentam .navbars {
+  background-color: #29ABE2;
+  color: #FFFFFF;
+}
+
+#sentam .menu-item:hover {
+  background-color: #29ABE2;
+}
+
+#bontieu .navbars {
+  background-color: #ED1E79;
+  color: #FFFFFF;
+}
+
+#bontieu .menu-item:hover {
+  background-color: #ED1E79;
+}
+
+#bontam .navbars {
+  background-color: #22B573;
+  color: #FFFFFF;
+}
+
+#bontam .menu-item:hover {
+  background-color: #22B573;
+}
+
+#phukien .navbars {
+  background-color: #FBB03B;
+  color: #FFFFFF;
+}
+
+#phukien .menu-item:hover {
+  background-color: #FBB03B;
+}
+
+.kenhtuvan {
+  margin-top: 30px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.kenhtuvan .container div {
+  padding: 0;
+  margin: 0;
+}
+
+.kenhtuvan-header {
+  height: 10px;
+  background-color: #C1272D;
+}
+
+.kenhtuvan-title {
+  font-size: 14px;
+  margin: 10px 0 !important;
+}
+
+.xemthem {
+  margin: 10px;
+}
+
+.xemthem div {
+  text-align: center;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.footer-top {
+  height: 10px;
+  background-color: #C1272D;
+}
+
+.chinhsach-huongdan {
+  background-color: #F2F2F2;
+}
+
+.chinhsach-huongdan .row {
+  padding: 0 5% 30px 5%;
+}
+
+.chinhsach-huongdan a {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-title {
+  margin: 20px 0;
+}
+
+.footer-content p {
+  margin-bottom: 5px;
+}
+
+.footer-logo {
+  margin: 20%;
+}
+
+.footer-logo img {
+  display: block;
+  margin: 10px;
+}
+
+.morong {
+  margin: 20px 0;
+}
+
+.duan-title,
+.tintuc-title {
+  background-color: #FFFFFF;
+  display: inline-block;
+}
+
+.duan-title p,
+.tintuc-title p {
+  margin: 0;
+  padding: 10px;
+}
+
+.duan-header_border {
+  height: 6px;
+  background-color: #C1272D;
+}
+
+.tintuc-header_border {
+  height: 6px;
+  background-color: #0071BC;
+}
+
+.duan-content,
+.tintuc-content {
+  max-height: 580px;
+}
+
+.duan-content .row,
+.tintuc-content .row {
+  margin: 0;
+}
+
+.duan-item {
+  padding: 15px;
+  background-color: #FFFFFF;
+}
+
+.duan-image {
+  width: 100%;
+  max-height: 200px;
+}
+
+.duan-ten {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tintuc {
+  height: 100%;
+}
+
+.tintuc-content {
+  background-color: #FFFFFF;
+  padding-bottom: 10px;
+  height: 100%;
+}
+
+.tintuc-content hr {
+  margin: 0 10px 0;
+}
+
+.tintuc-item {
+  padding: 15px 0;
+  height: 33.333%;
+}
+
+.tintuc-item a {
+  display: inline-block;
+}
+
+.tintuc-item-title {
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
